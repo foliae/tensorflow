@@ -292,7 +292,6 @@ py_test(
     size = "small",
     srcs = ["python/learn/tests/estimators_test.py"],
     srcs_version = "PY2AND3",
-    tags = ["manual"],  # http://b/28555477
     deps = [
         ":learn",
         "//tensorflow:tensorflow_py",
@@ -497,10 +496,6 @@ py_test(
     size = "medium",
     srcs = ["python/learn/estimators/rnn_test.py"],
     srcs_version = "PY2AND3",
-    tags = [
-        "manual",
-        "notap",  # http://b/30843204
-    ],
     deps = [
         ":learn",
         "//tensorflow:tensorflow_py",
@@ -648,18 +643,6 @@ py_test(
 )
 
 py_test(
-    name = "dropout_ops_test",
-    size = "small",
-    srcs = ["python/learn/ops/tests/dropout_ops_test.py"],
-    srcs_version = "PY2AND3",
-    deps = [
-        ":learn",
-        "//tensorflow:tensorflow_py",
-        "//tensorflow/python:framework_test_lib",
-    ],
-)
-
-py_test(
     name = "seq2seq_ops_test",
     size = "small",
     srcs = ["python/learn/ops/tests/seq2seq_ops_test.py"],
@@ -712,7 +695,6 @@ py_test(
     size = "small",
     srcs = ["python/learn/learn_io/graph_io_test.py"],
     srcs_version = "PY2AND3",
-    tags = ["manual"],  # http://b/29229547
     deps = [
         ":learn",
         "//tensorflow:tensorflow_py",
